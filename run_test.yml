@@ -39,4 +39,5 @@ jobs:
       - name: Run Test R Script
         env:
           GOOGLE_AUTH_KEY: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+          GOOGLE_SHEETS_KEY: ${{ secrets.GOOGLE_SHEETS_KEY }}
         run: Rscript test.R
