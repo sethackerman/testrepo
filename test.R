@@ -4,8 +4,7 @@ library(jsonlite)
 
 list1 <- c("first","second","third")
 list2 <- c("uno","dos","tres")
-df <- as.data.frame(list1,list2)
-
+df <- data.frame(list1 = list1, list2 = list2)
 key_json <- jsonlite::fromJSON(Sys.getenv("GOOGLE_SHEETS_KEY"))
 gs4_auth(path = key_json)
 
