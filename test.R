@@ -2,6 +2,8 @@ library(googlesheets4)
 library(googledrive)
 library(jsonlite)
 
+cat("Raw secret:", Sys.getenv("GOOGLE_SHEETS_KEY"), "\n")
+
 list1 <- c("first","second","third")
 list2 <- c("uno","dos","tres")
 df <- data.frame(list1 = list1, list2 = list2)
