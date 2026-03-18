@@ -1,4 +1,4 @@
-name: Run Test R Script
+name: Run_Test_R_Script
 
 on:
   schedule:
