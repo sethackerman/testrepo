@@ -36,6 +36,16 @@ jobs:
           ))
         shell: Rscript {0}
 
+        - name: Check secret exists
+        run: |
+          if [ -z "$GOOGLE_SHEETS_KEY" ]; then
+            echo "SECRET IS EMPTY"
+          else
+            echo "SECRET LENGTH: ${#GOOGLE_SHEETS_KEY}"
+          fi
+        env:
+          GOOGLE_SHEETS_KEY: ${{ secrets.GOOGLE_SHEETS_KEY }}
+
       - name: Run Test R Script
         env:
           GOOGLE_SHEETS_KEY: ${{ secrets.GOOGLE_SHEETS_KEY }}
